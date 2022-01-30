@@ -1,0 +1,26 @@
+.section-container {
+  align-items: center;
+  display: flex;
+  color: #6a6a6a;
+  height: 200px;
+  justify-content: center;
+  width: 100%;
+}
+
+.button-section,
+.button-section--active {
+  color: #606060;
+  border-radius: 2px;
+  border: solid 1px #d6d6d6;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.9;
+  text-align: center;
+  width: 85px;
+}
+
+.button-section--active {
+  color: #1797ff;
+  border: solid 1px #1797ff;
+}
