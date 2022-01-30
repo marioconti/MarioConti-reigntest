@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 import { Dropdown } from "./Dropdown";
+import { CardNews } from "./CardNews";
 import "./styles.css";
-
 export const Results = () => {
   const [selected, setSelected] = useState("Select your news");
+
   return (
     <div className="results-container">
       <div className="all-section">
         <Dropdown selected={selected} setSelected={setSelected} />
-        <div className="results"></div>
+        <div className="results">
+          <CardNews />
+          <CardNews />
+          <CardNews />
+          <CardNews />
+          <CardNews />
+        </div>
       </div>
     </div>
   );
