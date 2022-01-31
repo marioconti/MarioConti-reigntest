@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import likeImage from "../../../Assets/liked.png";
 import unLikeImage from "../../../Assets/unliked.png";
 import clock from "../../../Assets/creatAt.png";
 
 export const CardNews = () => {
+  const [favorite, setFavorite] = useState(false);
+
+  const handleFavorite = () => {
+    setFavorite(!favorite);
+  };
+
   return (
     <div className="card-news-container">
       <div className="info-new">
@@ -17,7 +23,21 @@ export const CardNews = () => {
         </div>
       </div>
       <div className="like-container">
-        <img className="like" src={likeImage} alt="like" />
+        {!favorite ? (
+          <img
+            onClick={handleFavorite}
+            className="unlike"
+            src={unLikeImage}
+            alt="like"
+          />
+        ) : (
+          <img
+            onClick={handleFavorite}
+            className="like"
+            src={likeImage}
+            alt="like"
+          />
+        )}
       </div>
     </div>
   );

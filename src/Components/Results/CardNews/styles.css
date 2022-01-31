@@ -4,17 +4,23 @@
   border-radius: 6px;
   border: solid 1px #979797;
   display: flex;
-  height: 95px;
+  height: auto;
   font-family: Roboto;
   margin-bottom: 30px;
   width: 48%;
 }
+.card-news-container:hover {
+  opacity: 0.5;
+}
 
 .info-new {
-  width: 86%;
   display: flex;
+  cursor: pointer;
   flex-direction: column;
+  justify-content: center;
+  height: 95px;
   padding: 0px 23px;
+  width: 86%;
 }
 
 .creatAt {
@@ -46,19 +52,35 @@
 .like-container {
   align-items: center;
   background-color: rgb(245, 245, 245);
-  border: inherit;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  border-left: none;
-  border-right: none;
+  border: none;
   display: flex;
   height: 95px;
+  /* FIXME: agregar media querie para en especial aquí para 800 cubra todo el ancho 100% y aumentar el alto*/
   justify-content: center;
-  margin-left: auto;
   width: 14%;
 }
 
 .like,
 .unlike {
+  cursor: pointer;
   height: 22px;
+}
+@media screen and (max-width: 800px) {
+  .card-news-container {
+    margin: 35px auto;
+    width: 90%;
+    height: 140px;
+  }
+  .like-container,
+  .info-new {
+    height: 138px;
+  }
+  .info-new {
+    width: 80%;
+  }
+  .like-container {
+    width: 20%;
+  }
 }

@@ -4,11 +4,11 @@
   color: #6a6a6a;
   height: 200px;
   justify-content: center;
+  user-select: none;
   width: 100%;
 }
 
-.button-section,
-.button-section--active {
+.button-section {
   color: #606060;
   border-radius: 2px;
   border: solid 1px #d6d6d6;
@@ -18,9 +18,16 @@
   line-height: 1.9;
   text-align: center;
   width: 85px;
+  cursor: pointer;
 }
 
-.button-section--active {
+.active {
   color: #1797ff;
   border: solid 1px #1797ff;
+}
+
+@media screen and (max-width: 800px) {
+  .section-container{
+    margin: 0 auto;
+  }
 }

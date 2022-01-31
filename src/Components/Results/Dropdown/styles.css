@@ -1,6 +1,4 @@
 .dropdown {
-  border-radius: 4px;
-  border: solid 1px #2e2e2e;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -13,11 +11,13 @@
 
 .dropdown .dropdown-btn {
   align-items: center;
+  border-radius: 4px;
+  border: solid 1px #2e2e2e;
   display: flex;
   flex-direction: row;
   height: 30px;
   justify-content: space-between;
-  margin: 0 12px;
+  padding-left: 10px;
   user-select: none;
   width: 185px;
 }
@@ -47,7 +47,6 @@
   justify-content: flex-start;
   height: 40px;
   padding: 10px;
-  transition: all 0.2s;
   width: 198px;
 }
 
@@ -58,4 +57,11 @@
 
 .selected-text {
   margin: 0 auto 0 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .dropdown {
+    margin: 0 auto;
+    width: 90%;
+  }
 }
