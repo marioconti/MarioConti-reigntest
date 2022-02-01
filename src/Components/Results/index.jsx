@@ -23,7 +23,7 @@ export const Results = () => {
 
   useEffect(() => {
     getApiNews(visit, pagination);
-    getApiNews();
+    getApiNews();//eslint-disable-line
   }, [visit, pagination]);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export const Results = () => {
       getApiNews(visit, pagination);
     }
     getApiNews();
-  }, [selected]);
+  }, [selected]);//eslint-disable-line
 
   const getApiNews = async (name, page) => {
     try {
