@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles.css";
 import dropdown from "../../../Assets/down-arrow.png";
 import { newsSite } from "./data.js";
 
-export const Dropdown = ({ selected, setSelected }) => {
+export const Dropdown = ({ selected, setSelected, visit }) => {
   const [isActive, setIsActive] = useState(false);
 
+  useEffect(() => {}, [visit]);
   return (
     <div className="dropdown">
       <div className="dropdown-btn" onClick={() => setIsActive(!isActive)}>

@@ -13,3 +13,42 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.pagination-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  height: 80px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.box-pagination {
+  align-items: center;
+  border-radius: 6px;
+  border: solid 1px #d9d9d9;
+  background-color: #fff;
+  display: flex;
+  color: rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+  justify-content: center;
+  height: 35px;
+  margin: 5px;
+  text-align: center;
+  user-select: none;
+  width: 35px;
+}
+
+.box-pagination:hover {
+  color: white;
+  background-color: #1890ff;
+}
+
+@media screen and (max-width: 800px) {
+  .pagination-container {
+    height: 150px;
+    width: 80%;
+  }
+}
