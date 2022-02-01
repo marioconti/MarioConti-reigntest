@@ -19,11 +19,11 @@ export const Results = () => {
       getApiNews(visit, pagination);
     }
     getApiNews();
-  }, [pagination]);
+  }, [pagination]); //eslint-disable-line
 
   useEffect(() => {
     getApiNews(visit, pagination);
-    getApiNews();//eslint-disable-line
+    getApiNews(); //eslint-disable-line
   }, [visit, pagination]);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export const Results = () => {
       getApiNews(visit, pagination);
     }
     getApiNews();
-  }, [selected]);//eslint-disable-line
+  }, [selected]); //eslint-disable-line
 
   const getApiNews = async (name, page) => {
     try {
