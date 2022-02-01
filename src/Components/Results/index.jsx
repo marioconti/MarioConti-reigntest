@@ -40,7 +40,7 @@ export const Results = () => {
     try {
       if (name && page) {
         const data = await fetch(
-          `http://hn.algolia.com/api/v1/search_by_date?query=${name}&page=${page}&hitsPerPage=25`
+          `https://hn.algolia.com/api/v1/search_by_date?query=${name}&page=${page}&hitsPerPage=25`
         );
         const dataNews = await data.json();
         const ListData = await dataNews.hits;
